@@ -1,14 +1,18 @@
-import java.util.Random;
+import java.util.*;
 
 public class Deck {
-    private Card[] deck;
+    boolean initialized;
+    ArrayList<Card> allCards = new ArrayList<Card>();
     
-    private int cardsUsed;
-    
-    public void shuffle() {
-        for (int i = deck.length-1; i > 0; i--) {
-            int rand = (int) (Math.random()*(i+1));
-        }
+    Deck() {
+        initialized = true;
+        Deck();
+        shuffleDeck();
     }
     
+    
+    void shuffleDeck() {
+        long seed = System.nanoTime();
+        Collections.shuffle(allCards, new Random(seed));
+    }
 }

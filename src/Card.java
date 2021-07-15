@@ -1,11 +1,9 @@
 public class Card {
-    enum Suits {
+    enum Suit {
         Spades, Diamonds, Hearts,Clubs
     }
-    enum Numbers {
-        One,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,A,J,Q,K
+    enum Number {
+        One,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,J,Q,K,Ace
     }
     
-   
-    String Card = Numbers + Suits;
 }

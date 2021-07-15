@@ -1,39 +1,10 @@
 import java.util.*;
 
+
 public class Main {
-    static String turn = "Player One";
-    int score = 0;
-    String winner = null;
-    Scanner input = new Scanner(System.in);
-   
-   if(turn("Player One"))
-    
-    {
-        turn = "Player Two";
-    }else(turn.equals("Player Two"))
-    
-    {
-        turn = "Player Three";
-    }else(turn.equals("Player Three")
-    
-    {
-        turn = "Player Four";
+    public static void main(String[] args) {
+        System.out.println("Welcome to Heart's Card game!");
+        System.out.println("This game requires a bit more thinking.");
+        System.out.println("You and 3 other players try to trick each other!");
     }
-    
-   while(winner ==null)
-    
-    {
-        int numInput;
-        
-        try {
-            numInput = input.nextInt();
-            if(!(numInput>0 && numInput <= 12)) {
-                System.out.println("That's not a valid number please try again. ");
-                continue;
-            }
-            catch (InputMismatchException e) {
-                System.out.println("That's not a valid number please try again. ");
-                contiune;
-            }
-        }
-    }
+}
