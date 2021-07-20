@@ -1,18 +1,13 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Deck {
-    boolean initialized;
-    ArrayList<Card> allCards = new ArrayList<Card>();
-    
-    Deck() {
-        initialized = true;
-        Deck();
-        shuffleDeck();
+    private ArrayList<Cards> Deck;
+
+    public Deck(ArrayList<Cards> deck) {
+        Deck = deck;
     }
-    
-    
-    void shuffleDeck() {
-        long seed = System.nanoTime();
-        Collections.shuffle(allCards, new Random(seed));
+    public Deck(){
+
     }
 }
