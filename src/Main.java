@@ -14,36 +14,13 @@ public class Main {
             System.out.println("Sorry you must Have at 4 players to play this game \n");
 //            System.exit(0);
         } else {
-            System.out.println("Hello and Welcome to the game of Hearts!");
+            System.out.println("Hello and Welcome to the game of Hearts!😊");
             // The information below is supposed to be in the player class figure
             // that out after you have written the information in code
-//
-//            System.out.println("player 1 ");
-//            System.out.println("what is your name?");
-//  Scanner player = new Scanner(System.in);
-//  String playerOne = player.nextLine();
-//            System.out.println("nice to meet you " + playerOne);
-//  //player 2
-//            System.out.println("Player 2 ");
-//            System.out.println("what is your name?");
-//  Scanner playerWho = new Scanner(System.in);
-//  String playerTwo = playerWho.nextLine();
-//            System.out.println("nice to meet you " + playerTwo);
-//  //player 3
-//            System.out.println("Player 3");
-//            System.out.println("what is your name?");
-//  Scanner playerNow = new Scanner(System.in);
-//  String playerThree = playerNow.nextLine();
-//            System.out.println("nice to meet you " + playerThree);
-//  //player 4
-//            System.out.println("Player 4");
-//            System.out.println("what is your name?");
-//  Scanner playerHere = new Scanner(System.in);
-//  String playerFour = playerHere.nextLine();
-//            System.out.println("nice to meet you " + playerFour);
-//            System.out.println("Ready players?");
-//            System.out.println("Lets play !");
             Player.greetPlayers();
+            Player.playerStand();
+//         see if we can use this to find the card in the suit within the player file and
+//  and bring it all and connect it from the deck and cards file "Card.Suit.Diamonds"
         }
 
 //        Player player = new Player();
@@ -51,6 +28,7 @@ public class Main {
 //        Player player = new Player();
 //        System.out.println(player.playerStand());
 
-
+        System.out.println("Thank you for playing the game of hearts!");
+        System.out.println("Come again next time! 😉");
     }
 }

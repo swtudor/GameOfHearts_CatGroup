@@ -4,14 +4,14 @@ public class Cards {
         String value;
         Type suit;
 
-        public static enum Type {
+        public static enum Type{
             HEARTS, SPADES, DIAMONDS, CLUBS
         }
-        final String[] valuesystem = new String[]{
+        final String[] valuesystem = new String[] {
                 "2","3","4","5","6","7","8","9","10","J","Q","K","A"
         } ;
 
-        public Cards(String value, Type suit) {
+        public Cards(String value, Type suit){
             this.value = value;
             this.suit = suit;
         }
@@ -52,6 +52,7 @@ public class Cards {
             //if they match return the value of i
             // when the for loop ends have a return statement that returns -1
         }
+
 
         public String getValue() {
             return value;

@@ -1,55 +1,75 @@
-import com.sun.tools.javac.Main;
 
 import java.util.Scanner;
 
- class Player {
-          static public void greetPlayers() {
-              System.out.println("player 1 ");
-              System.out.println("what is your name?");
-              Scanner player = new Scanner(System.in);
-              String playerOne = player.nextLine();
-              System.out.println("nice to meet you " + playerOne);
-              //player 2
-              System.out.println("Player 2 ");
-              System.out.println("what is your name?");
-              Scanner playerWho = new Scanner(System.in);
-              String playerTwo = playerWho.nextLine();
-              System.out.println("nice to meet you " + playerTwo);
-              //player 3
-              System.out.println("Player 3");
-              System.out.println("what is your name?");
-              Scanner playerNow = new Scanner(System.in);
-              String playerThree = playerNow.nextLine();
-              System.out.println("nice to meet you " + playerThree);
-              //player 4
-              System.out.println("Player 4");
-              System.out.println("what is your name?");
-              Scanner playerHere = new Scanner(System.in);
-              String playerFour = playerHere.nextLine();
-              System.out.println("nice to meet you " + playerFour);
+class Player {
+    static public void greetPlayers() {
+        System.out.println("player 1 ");
+        System.out.println("what is your name?");
+        Scanner player = new Scanner(System.in);
+        String playerOne = player.nextLine();
+        System.out.println("nice to meet you " + playerOne);
+        //player 2
+        System.out.println("Player 2 ");
+        System.out.println("what is your name?");
+        Scanner playerWho = new Scanner(System.in);
+        String playerTwo = playerWho.nextLine();
+        System.out.println("nice to meet you " + playerTwo);
+        //player 3
+        System.out.println("Player 3");
+        System.out.println("what is your name?");
+        Scanner playerNow = new Scanner(System.in);
+        String playerThree = playerNow.nextLine();
+        System.out.println("nice to meet you " + playerThree);
+        //player 4
+        System.out.println("Player 4");
+        System.out.println("what is your name?");
+        Scanner playerHere = new Scanner(System.in);
+        String playerFour = playerHere.nextLine();
+        System.out.println("nice to meet you " + playerFour);
 
-            //  return system for scanner system to remember name and user it
-              System.out.println("Ready players?");
-              System.out.println("Lets play !");
-          }
-
-
+        //  return system for scanner system to remember name and user it
+        System.out.println("Ready players?");
+        System.out.println("Lets play !");
+    }
 
 
+    static public void playerStand() {
+        System.out.println("player one:");
+        System.out.println("what card would you like to play? ");
+        // display the cards the random cards they have been given and what they can choose
+        System.out.println("Here are your cards ");
+        Scanner cardsPlayerOne = new Scanner(System.in);
+        String cardsPlayer = cardsPlayerOne.nextLine();
+        System.out.println("You have chosen:" + cardsPlayer);
+        //add if statment or forloop : if player one plays a card its player two's turn.
+        System.out.println("player one:");
+        System.out.println("what card would you like to play? ");
+        // display the cards the random cards they have been given and what they can choose
+        System.out.println("Here are your cards ");
+        Scanner cardsPlayertwo = new Scanner(System.in);
+        String cardsPlayerWho = cardsPlayertwo.nextLine();
+        System.out.println("You have chosen:" + cardsPlayerWho + "Player 2");
+        // keep player three in a loop as well to move on to player three
+        System.out.println("player one:");
+        System.out.println("what card would you like to play? ");
+        // display the cards the random cards they have been given and what they can choose
+        System.out.println("Here are your cards ");
+        Scanner cardsPlayerThree = new Scanner(System.in);
+        String cardsPlayerNow = cardsPlayerThree.nextLine();
+        System.out.println("You have chosen:" + cardsPlayerNow);
 
-//
-//     private String playerName = "Have";
-//  public String playerStand(){
-//   return playerName;
-//  }
-  //currentHandDealt
-  //currentCardPlayed
-  //name
-  //score
-  //isTurn
-  //tricks
-  //list
+        //currentHandDealt
+        //currentCardPlayed
+        //name
+        //score if greater than statment: maybe and if else statement and a loop to determine which is higher
+        //isTurn:determine who turn it is
+        //tricks: walks away with the tricks? maybe do the same
+        // thing as score. use sout:("player:" + numbers + "you have won this trick ")
+        //list: use list for cards, scoring and
+//   return the player who won sout:("player"+number+ you won the game of hearts ;
+        //import cards class
 
+    }
 
 
 //     Object playCard(){
@@ -64,13 +84,12 @@ import java.util.Scanner;
 //  }
 // collectTricks(){
 // takes in a list of 4 cards
-     // adds to list
-     //loop thru tricks list
-     //add 1 pt for each heart/13 for Q
+    // adds to list
+    //loop thru tricks list
+    //add 1 pt for each heart/13 for Q
 //   return null;
 //  }
 //
-
 
 
 }
