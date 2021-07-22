@@ -34,30 +34,48 @@ class Player {
 
 
     static public void playerStand() {
+        //player One
         System.out.println("player one:");
+        System.out.println("Here are your cards ");
         System.out.println("what card would you like to play? ");
         // display the cards the random cards they have been given and what they can choose
-        System.out.println("Here are your cards ");
+
         Scanner cardsPlayerOne = new Scanner(System.in);
         String cardsPlayer = cardsPlayerOne.nextLine();
         System.out.println("You have chosen:" + cardsPlayer);
         //add if statment or forloop : if player one plays a card its player two's turn.
-        System.out.println("player one:");
-        System.out.println("what card would you like to play? ");
-        // display the cards the random cards they have been given and what they can choose
+        System.out.println("player Two:");
         System.out.println("Here are your cards ");
+        System.out.println("what card would you like to play? ");
+//        Card.Suit.Diamonds.equals(Card.Suit.Diamonds );
+        // display the cards the random cards they have been given and what they can choose
+
         Scanner cardsPlayertwo = new Scanner(System.in);
         String cardsPlayerWho = cardsPlayertwo.nextLine();
         System.out.println("You have chosen:" + cardsPlayerWho + "Player 2");
         // keep player three in a loop as well to move on to player three
-        System.out.println("player one:");
+        System.out.println("player Three:");
+        System.out.println("Here are your cards ");
         System.out.println("what card would you like to play? ");
         // display the cards the random cards they have been given and what they can choose
-        System.out.println("Here are your cards ");
+
         Scanner cardsPlayerThree = new Scanner(System.in);
         String cardsPlayerNow = cardsPlayerThree.nextLine();
         System.out.println("You have chosen:" + cardsPlayerNow);
 
+        System.out.println("Player Five:");
+        System.out.println("Here are your cards ");
+        System.out.println("what card would you like to play? ");
+
+        Scanner cardsPlayerFour = new Scanner(System.in);
+        String cardsPlayerStart = cardsPlayerFour.nextLine();
+        System.out.println("You have chosen:" + cardsPlayerStart);
+
+
+
+
+
+        //use windows+period to pull up the emoji app 
         //currentHandDealt
         //currentCardPlayed
         //name

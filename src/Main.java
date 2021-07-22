@@ -19,6 +19,7 @@ public class Main {
             // that out after you have written the information in code
             Player.greetPlayers();
             Player.playerStand();
+            Card.Suit.Diamonds.equals(Card.Number.Five);
 //         see if we can use this to find the card in the suit within the player file and
 //  and bring it all and connect it from the deck and cards file "Card.Suit.Diamonds"
         }
