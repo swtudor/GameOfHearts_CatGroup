@@ -3,70 +3,56 @@ package Hearts;
 import java.util.*;
 
 public class Deck {
-    ArrayList<Card> deck = new ArrayList<Card>();
-    private String faceValue;
+    //creates a private deck that uses buildsDeck which is down below ------>
+    private ArrayList<Card> deck = buildsDeck();
     
-    // Create 52 unqiue cards with 13 of each suit + value
+    //Shuffle deck
+    public void shuffleDeck() {
+        Collections.shuffle(deck, new Random());
+    }
+    
+    //This is for the public for other classes to use the deck
+    public ArrayList<Card> getDeck() {
+        return deck;
+    }
+    
+    // Create 52 unique cards with 13 of each suit + value
     // <-- add to deck list
-    //
     public ArrayList<Card> buildsDeck() {
-        //For every suit in the Card.Suit
+    //For every suit in the Card.Suit
+        
         ArrayList<Card> tempDeck = new ArrayList<>();
+        
+        //outer loop for that holds the suit
         for (Card.Suit currentSuit : Card.Suit.values()) {
-            for (int i = 13; i > 0; i--) {
-              
+            for (int i = 13; i > 0; i--) { //the inner loop that runs through 13 and assigns a different value
+                String faceValue = switch (i) {
+                    case 1 -> "2";
+                    case 2 -> "3";
+                    case 3 -> "4";
+                    case 4 -> "5";
+                    case 5 -> "6";
+                    case 6 -> "7";
+                    case 7 -> "8";
+                    case 8 -> "9";
+                    case 9 -> "10";
+                    case 10 -> "J";
+                    case 11 -> "Q";
+                    case 12 -> "K";
+                    case 13 -> "A";
+                    default -> "";
+                };
                 Card newCard = new Card(faceValue, currentSuit);
                 tempDeck.add(newCard);
-                switch (i) {
-                    case 1:
-                        System.out.println("2");
-                    case 2:
-                        System.out.println("3");
-                    case 3:
-                        System.out.println("4");
-                    case 4:
-                        System.out.println("5");
-                    case 5:
-                        System.out.println("6");
-                    case 6:
-                        System.out.println("7");
-                    case 7:
-                        System.out.println("8");
-                    case 8:
-                        System.out.println("9");
-                    case 9:
-                        System.out.println("10");
-                    case 10:
-                        System.out.println("J");
-                    case 11:
-                        System.out.println("Q");
-                    case 12:
-                        System.out.println("K");
-                    case 13:
-                        System.out.println("A");
-                    break;
-                }
                 //Determine face value
                 //Create a new card
                 //Add a new card
-                //(i = facevalue)
+                //(i = faceValue)
             }
             //Create 13 Unique Card Objects
-            //add to temp deck
-            }
+            // add to temp deck
+        }
+        shuffleDeck();
         return tempDeck;
-    }
-    
-    
-    //Double check to be sure its 52 otherwise do it again
-    boolean checkDeck() {
-        if (deck.size() == 52) return true;
-        return false;
-    }
-    
-    //Shuffle deck
-    void shuffleDeck() {
-        long seed = System.nanoTime();
-        Collections.shuffle(deck, new Random(seed));
     }
 }

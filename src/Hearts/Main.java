@@ -20,6 +20,10 @@ class Board {
     }
     
     public Board() {
+        Card[] cards;
+        
+        Deck deck;
+        
         //Player 1 (Hand)
         // Player 2(Hand)
         //Player 3(Hand)
