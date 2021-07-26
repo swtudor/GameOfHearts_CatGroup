@@ -19,7 +19,7 @@ public class Deck {
     // Create 52 unique cards with 13 of each suit + value
     // <-- add to deck list
     public ArrayList<Card> buildsDeck() {
-    //For every suit in the Card.Suit
+        //For every suit in the Card.Suit
         
         ArrayList<Card> tempDeck = new ArrayList<>();
         
@@ -52,7 +52,6 @@ public class Deck {
             //Create 13 Unique Card Objects
             // add to temp deck
         }
-        shuffleDeck();
         return tempDeck;
     }
 }
