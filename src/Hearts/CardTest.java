@@ -2,31 +2,21 @@ package Hearts;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class CardTest {
-    
-    @Test
-    void isGreaterThan() {
-    }
+    private final Card testCard = new Card();
     
     @Test
     void testEquals() {
     }
     
     @Test
-    void testHashCode() {
+    void faceValueSuit() {
+        Card queenAce = new Card();
+        Card twoSpade = new Card();
+        Card threeDiamond = new Card();
+        Card kingClub = new Card();
+        
+        
     }
     
-    @Test
-    void findIndex() {
-    }
-    
-    @Test
-    void getValue() {
-    }
-    
-    @Test
-    void getSuit() {
-    }
 }
