@@ -13,20 +13,17 @@ class DeckTest {
         assertEquals(52, testDeck.getDeck().size());
     }
     
-    @Test
     void populateDeck() {
         Card queenAce = new Card("A", Card.Suit.HEARTS);
         Card twoSpade = new Card("2", Card.Suit.SPADES);
         Card threeDiamond = new Card("3", Card.Suit.DIAMONDS);
         Card kingClub = new Card("K", Card.Suit.CLUBS);
-        
+    
         assertTrue(testDeck.getDeck().contains(queenAce));
         assertTrue(testDeck.getDeck().contains(twoSpade));
         assertTrue(testDeck.getDeck().contains(threeDiamond));
         assertTrue(testDeck.getDeck().contains(kingClub));
     }
-    
-  
     @Test
     void testShuffleDeck() {
     }

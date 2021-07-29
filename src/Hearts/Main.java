@@ -1,128 +1,141 @@
 package Hearts;
-import java.util.*;
 
-class Board {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    static Scanner scan = new Scanner(System.in);
+    static List<Player> players;
+    static Deck clubs = new Deck();
+    static ArrayList<List<Card>> lunch;
+    private static int playerScore;
+    private static boolean continueGame;
     
-    //will work with Player Class scores just to display & work with win condition
-    String name;
-    int points;
-    
-    // Return the name of the player
-    String getName() {
-        return name;
+    //Main room add the roots
+    //  scanner System
+    public static void main(String[] args) {
+        clubs.shuffleDeck();
+        clubs.getDeck().forEach(x -> System.out.println(x.value + x.suit.toString()));
+        lunch = clubs.dealingahand();
+        System.out.println("Hello and Welcome to the game of Hearts!😊");
+        // The information below is supposed to be in the player class figure
+        // that out after you have written the information in code
+        players = greetPlayers();
+        playerStand();
+//         see if we can use this to find the card in the suit within the player file and
+//  and bring it all and connect it from the deck and cards file "Card.Suit.Diamonds
+//        Player player = new Player();
+//        player.playerName = scan.nextLine();
+//        Player player = new Player();
+//        System.out.println(player.playerStand());
+        
+        System.out.println("Thank you for playing the game of hearts!");
+        System.out.println("Come again next time! 😉");
     }
     
-    // use this class to keep track of suit ranges
-    // [startIndex, endIndex) or startIndex = -1 if no suit
-    class SuitRange {
-        int startIndex;
-        int endIndex;
+    static public List<Player> greetPlayers() {
+        List<Player> players = new ArrayList<>();
+        System.out.println("player 1 ");
+        System.out.println("what is your name?");
+        String playerOne = scan.nextLine();
+        Player hearts = new Player(playerOne);
+        players.add(hearts);
+        System.out.println("nice to meet you " + playerOne);
+        //player 2
+        System.out.println("Player 2 ");
+        System.out.println("what is your name?");
+        String playerTwo = scan.nextLine();
+        hearts = new Player(playerTwo);
+        players.add(hearts);
+        System.out.println("nice to meet you " + playerTwo);
+        //player 3
+        System.out.println("Player 3");
+        System.out.println("what is your name?");
+        String playerThree = scan.nextLine();
+        hearts = new Player(playerThree);
+        players.add(hearts);
+        System.out.println("nice to meet you " + playerThree);
+        //player 4
+        System.out.println("Player 4");
+        System.out.println("what is your name?");
+        String playerFour = scan.nextLine();
+        hearts = new Player(playerFour);
+        players.add(hearts);
+        System.out.println("nice to meet you " + playerFour);
         
-        SuitRange() {
-            startIndex = -1;
-            endIndex = -1;
-        }
+        //  return system for scanner system to remember name and user it
+        System.out.println("Ready players?");
+        System.out.println("Lets play !");
         
-        // Returns how many cards of that suit exist
-        int getRange() {
-            return endIndex - startIndex;
-        }
+        
+        return players;
     }
     
-    //For winCondition down there (public winCondition())
-    Board b = new Board();
-    
-    public Board() {
+    static public void playerStand() {
+        //player One
+        System.out.println("player one:");
+        System.out.println("Here are your cards ");
+        players.get(0).setHand(lunch.get(0));
+        System.out.println("what card would you like to play? ");
+        // display the cards the random cards they have been given and what they can choose
+        System.out.println("Here are your cards ");
         
-        //Playerone Scores
-        //Show who's turn it is
+        Scanner cardsPlayerOne = new Scanner(System.in);
+        String cardsPlayer = cardsPlayerOne.nextLine();
+        System.out.println("You have chosen:" + cardsPlayer);
+        //add if statement or for loop : if player one plays a card its player two's turn.
+        System.out.println("player Two:");
+        System.out.println("Here are your cards ");
+        players.get(1).setHand(lunch.get(1));
+        System.out.println("what card would you like to play? ");
+//        Card.Suit.Diamonds.equals(Card.Suit.Diamonds );
+        // display the cards the random cards they have been given and what they can choose
         
+        Scanner cardsPlayertwo = new Scanner(System.in);
+        String cardsPlayerWho = cardsPlayertwo.nextLine();
+        System.out.println("You have chosen:" + cardsPlayerWho + "Player 2");
+        // keep player three in a loop as well to move on to player three
+        System.out.println("player one:");
+        System.out.println("player Three:");
+        System.out.println("Here are your cards ");
+        players.get(2).setHand(lunch.get(2));
+        System.out.println("what card would you like to play? ");
+        // display the cards the random cards they have been given and what they can choose
+        Scanner cardsPlayerThree = new Scanner(System.in);
+        String cardsPlayerNow = cardsPlayerThree.nextLine();
+        System.out.println("You have chosen:" + cardsPlayerNow);
+        
+        System.out.println("Player Four:");
+        System.out.println("Here are your cards ");
+        players.get(3).setHand(lunch.get(3));
+        System.out.println("what card would you like to play? ");
+        
+        Scanner cardsPlayerFour = new Scanner(System.in);
+        String cardsPlayerStart = cardsPlayerFour.nextLine();
+        System.out.println("You have chosen:" + cardsPlayerStart);
+        
+        
+        //use windows+period to pull up the emoji app
+        //currentHandDealt
+        //currentCardPlayed
+        //name
+        
+        //Game loop till player score is 50
+        //public void gameLoop () {
+        // do {
+        // playerStand();
+        // }
+        //while (playerScore < 50);
+        // {
+        // continueGame = true;
+        // }
+        // if (playerScore >= 50) ;
+        // {
+        // continueGame = false;
+        // }
+        // return playerScore;
+         }
     }
+
     
-    Boolean playerTurn = true;
-    
-    //Win Condition if 50 see who has the lowest and that's the Winner!
-    public void Board(String winner) {
-        do {
-            winner = "";
-        }
-        while (points < 50);
-        {
-            playerTurn = true;
-        }
-        if (points > 50) ;
-        {
-            playerTurn = false;
-            return;
-        }
-    
-        //For win condition if one player hits 50 begin the count (for now the game will run like that)
-        //Winner Message to either PlayerOne as 1,2,3 or 4 (Lowest Score)
-        //String winner = "Congrats " + PlayerOne;
-    
-        public static class Main<column> {
-            public static void main(String[] args) {
-                System.out.println("Welcome to Heart's Hearts.Card game!");
-                System.out.println("You and 3 other players try to trick each other (Hearts!) !");
-            
-            }
-        
-            public void greetPlayers() {
-                System.out.println("player1 1 ");
-                System.out.println("what is your name?");
-                Scanner player1 = new Scanner(System.in);
-                String playerOne = player1.nextLine();
-                System.out.println("nice to meet you " + playerOne);
-                //player1 2
-                System.out.println("Player 2 ");
-                System.out.println("what is your name?");
-                Scanner player2 = new Scanner(System.in);
-                String playerTwo = player2.nextLine();
-                System.out.println("nice to meet you " + playerTwo);
-                //player1 3
-                System.out.println("Player 3");
-                System.out.println("what is your name?");
-                Scanner player3 = new Scanner(System.in);
-                String playerThree = player3.nextLine();
-                System.out.println("nice to meet you " + playerThree);
-                //player1 4
-                System.out.println("Player 4");
-                System.out.println("what is your name?");
-                Scanner player4 = new Scanner(System.in);
-                String playerFour = player4.nextLine();
-                System.out.println("nice to meet you " + playerFour);
-            
-                //  return system for scanner system to remember name and user it
-                System.out.println("Ready players?");
-                System.out.println("Lets play Hearts!");
-            }
-            char turn = '1' ;
-	        System.out.print("Red player enter number 0 - 6 =>");
-	        Scanner input = new Scanner(System.in);
-             Card  = input.nextLine();
-            boolean result = placeDisk(board, Card, turn);
-            printBoard(board);
-    
-            turn = '2' ;
-	        System.out.print("Yellow player enter number 0 - 6 =>");
-            column = input.nextInt();
-            result = placeDisk(board, column, turn);
-            printBoard(board);
-            
-            char turn = '3' ;
-	        System.out.print("Red player enter number 0 - 6 =>");
-            column = input.nextInt();
-            boolean result = placeDisk(board, column, turn);
-            printBoard(board);
-    
-            turn = '4' ;
-	        System.out.print("player 4 enter number 0 - 6 =>");
-            column = input.nextInt();
-            result = placeDisk(board, column, turn);
-            printBoard(board);
-    
-    
-    
-        }
-    }
-}

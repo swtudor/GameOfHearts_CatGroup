@@ -3,7 +3,6 @@ package Hearts;
 import org.junit.jupiter.api.Test;
 
 class CardTest {
-    private final Card testCard = new Card();
     
     @Test
     void testEquals() {
@@ -11,11 +10,10 @@ class CardTest {
     
     @Test
     void faceValueSuit() {
-        Card queenAce = new Card();
-        Card twoSpade = new Card();
-        Card threeDiamond = new Card();
-        Card kingClub = new Card();
-        
+        Card queenAce = new Card("A", Card.Suit.HEARTS);
+        Card twoSpade = new Card("2", Card.Suit.SPADES);
+        Card threeDiamond = new Card("3", Card.Suit.DIAMONDS);
+        Card kingClub = new Card("K", Card.Suit.CLUBS);
         
     }
     

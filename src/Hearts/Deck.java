@@ -54,4 +54,19 @@ public class Deck {
         }
         return tempDeck;
     }
+    //hand each player 13 cards
+    // each player hand has to be different
+    // return 4 list of 13 cards
+    public ArrayList<List<Card>> dealingahand(){
+        List<Card> arrlist2 = deck.subList(0,13);
+        List<Card> arrlist3 = deck.subList(13,26);
+        List<Card> arrlist4 = deck.subList(26,39);
+        List<Card> arrlist5 = deck.subList(39,52);
+        ArrayList<List<Card>> spades = new ArrayList<>();
+        spades.add(arrlist2);
+        spades.add(arrlist3);
+        spades.add(arrlist4);
+        spades.add(arrlist5);
+        return spades;
+    }
 }

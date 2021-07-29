@@ -2,17 +2,13 @@ package Hearts;
 
 import java.util.Objects;
 
-public class Card{
+public class Card {
+    final String[] faceValue = new String[]{
+            "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"
+    };
     // value, suit
     String value;
     Suit suit;
-    
-    public static enum Suit {
-        HEARTS, SPADES, DIAMONDS, CLUBS
-    }
-    final String[] faceValue = new String[]{
-            "2","3","4","5","6","7","8","9","10","J","Q","K","A"
-    } ;
     
     public Card(String value, Card.Suit suit) {
         this.value = value;
@@ -21,9 +17,8 @@ public class Card{
     
     /*
      * should check if their equal first if not equal than you check the isGreaterThan */
-    
-    public boolean isGreaterThan (Card c) {
-        return  c.findIndex() < this.findIndex();
+    public boolean isGreaterThan(Card c) {
+        return c.findIndex() < this.findIndex();
     }
     
     @Override
@@ -43,9 +38,9 @@ public class Card{
     // call find index that will return the value of the valuesystem
     //compare it to another card in the same find index
     //
-    public int findIndex(){
-        for (int i = 0; i < faceValue.length; i++){
-            if (faceValue[i].equals(value)){
+    public int findIndex() {
+        for (int i = 0; i < faceValue.length; i++) {
+            if (faceValue[i].equals(value)) {
                 return i;
             }
         }
@@ -64,4 +59,7 @@ public class Card{
         return suit;
     }
     
+    public static enum Suit {
+        HEARTS, SPADES, DIAMONDS, CLUBS
     }
+}
